@@ -1,5 +1,7 @@
 const fs = require('fs');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const chalk = require("chalk");
+const log = console.log;
 
 // array of prompts for user
 const prompts = [
@@ -21,17 +23,21 @@ function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, parsedData , err => { 
         if (err) 
-          console.log(err); 
+          log(err); 
         else { 
-          console.log('File created successfully!');
+          log(chalk.black.bgGreen('Your README has been generated!'));
+          log(`A markdown file called ${fileName} has been saved at the root of this directory.`);
         } 
     }); 
 }
 
 // function to initialize program
 function init() {
-    console.log(
-        'Let\'s generate a professional README.md for your open source GithHub project!\nEnter your project info to add it to the README...')
+    log(chalk.inverse(' **************************** '));
+    log(chalk.inverse(' *     README Generator     * '));
+    log(chalk.inverse(' **************************** '));
+    log('Let\'s generate a professional README.md for your open source GithHub project!');
+    log(chalk.green('Enter your project info to add it to the README...'));
     inquirer.prompt([
         {type: 'input', message: prompts[0], name: 'github'}, 
         {type: 'input', message: prompts[1], name: 'email'},
@@ -39,7 +45,7 @@ function init() {
         {type: 'input', message: prompts[3], name: 'description'},
         {type: 'input', message: prompts[4], name: 'installation'},
         {type: 'input', message: prompts[5], name: 'usage'},
-        {type: 'list', message: prompts[6], name: 'license', choices: ['MIT', 'GNU']},
+        {type: 'list', message: prompts[6], name: 'license', choices: ['MIT', 'GPL', 'ISC']},
         {type: 'input', message: prompts[7], name: 'contributions'},
         {type: 'input', message: prompts[8], name: 'testing'}
     ])
@@ -47,7 +53,7 @@ function init() {
         let fileName = answers.title.split(' ').join('-') + '-README.md';
         writeToFile(fileName, answers);
     })
-    .catch(err => console.log(err));
+    .catch(err => log(err));
     
 }
 

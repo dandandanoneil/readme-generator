@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "dandandanoneil",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/dandandanoneil/readme-generator/issues"
   },
-  "homepage": "https://github.com/dandandanoneil/readme-generator#readme"
+  "homepage": "https://github.com/dandandanoneil/readme-generator#readme",
+  "devDependencies": {}
 }
