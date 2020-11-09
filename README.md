@@ -2,11 +2,11 @@
 Command line application that generates a clean, professional README using Node.js, Inquirer, and Chalk.
 
 ## Table of Contents
-- [Installation Steps](#installation-steps)
+- [Installation Steps](#installation)
 - [Usage Instructions](#usage-instructions)
+- [SCreen Recording](#screen-recording)
 - [Licenses](#licenses)
 - [Contribution Guidelines](#contribution-guidelines)
-- [Testing Instructions](#testing-instructions)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
