@@ -4,7 +4,7 @@ Command line application that generates a clean, professional README using Node.
 ## Table of Contents
 - [Installation Steps](#installation)
 - [Usage Instructions](#usage-instructions)
-- [SCreen Recording](#screen-recording)
+- [Screen Recording](#screen-recording)
 - [Licenses](#licenses)
 - [Contribution Guidelines](#contribution-guidelines)
 
